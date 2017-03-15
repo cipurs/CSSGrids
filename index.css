@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  height: 100%;
+  width: 100%;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+body{
+  background-color: rgb(200,200,200);
+  margin: 0 auto;
+  height:100%;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.grid-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 33.333% 33.333% 33.333%;
+  grid-template-rows: 30% 30% 30% 10%;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
+  ".... .... ...."
+  ".... content ...."
+  ".... .... ...."
+  "footer footer footer";
+}
+
+.placeholder1 {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+}
+
+.placeholder2 {
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+}
+
+footer {
+  grid-column: 1 / 5;
+  grid-row: 4 / 5;
+  background-color: rgb(44, 62, 80);
+  color: rgb(255,255,255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  height: 100%;
+}
+
+.nested-grid {
+  height: 100%;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  grid-area: content;
+  background-color: rgb(120, 144, 156);
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #888888;
+  grid-column-gap: 10px;
+}
+
+.layout-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: auto;
+  grid-row: 1 / 2;
+
+}
+
+.layout-2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  grid-column: auto;
+  grid-row: 2 / 3;
+}
+
+.
